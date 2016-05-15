@@ -67,4 +67,12 @@ facebook          = ["hyper/ssl", "openssl"]
 portaudio-backend = ["portaudio"]
 pulseaudio-backend= ["libpulse-sys"]
 static-appkey     = []
-default           = ["with-syntex", "portaudio-backend"]
+default           = ["with-syntex", "portaudio-backend", "facebook"]
+
+[profile.dev]
+opt-level = 0
+debug = false
+rpath = false
+lto = false
+debug-assertions = false
+codegen-units = 1
