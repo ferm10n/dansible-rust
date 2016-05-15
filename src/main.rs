@@ -48,5 +48,7 @@ fn main() {
 
     loop {
         session.poll();
+        // println!("hey");
+        // std::thread::sleep_ms(1000);
     }
 }

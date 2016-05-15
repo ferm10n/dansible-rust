@@ -106,8 +106,11 @@ impl SpircManager {
                      frame.get_ident(),
                      frame.get_seq_nr(),
                      frame.get_state_update_id());
+                     
+            debug!("Song position: {}ms",frame.get_state().get_position_ms());
 
             self.0.lock().unwrap().handle(frame);
+            
         }
     }
 
